@@ -1,3 +1,3 @@
 import streamlit as st
 st.title('My Parents New Healthy Diner')
-st.caption('Breakfast')
+st.subheader('Breakfast')
