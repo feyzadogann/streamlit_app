@@ -25,12 +25,6 @@ st.dataframe(fruits_to_show)
 st.header('Fruityvice Fruit Advice!')
 fruityvice_response = rq.get("https://fruityvice.com/api/fruit/" + "kiwi")
 
-
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 st.dataframe(fruityvice_normalized)
 
-
-for f in fruits_to_show:
-  print(f)
-for fr in fruits_selected:
-  print(fr)
