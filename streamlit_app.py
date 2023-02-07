@@ -27,7 +27,7 @@ st.dataframe(fruits_to_show)
 st.header('Fruityvice Fruit Advice!')
 try:
   fruit_choice = st.text_input("What fruit would you like information about?")
-  print(fruit_choice)
+  st.text(fruit_choice)
   if not fruit_choice:
     st.error("Please select a fruit to get information")
   else:
