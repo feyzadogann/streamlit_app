@@ -27,15 +27,13 @@ st.dataframe(fruits_to_show)
 st.header('Fruityvice Fruit Advice!')
 try:
   fruit_choice = st.text_input("What fruit would you like information about?")
-  st.text(fruit_choice)
   if not fruit_choice:
     st.error("Please select a fruit to get information")
   else:
     fruityvice_response = rq.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
     st.dataframe(fruityvice_normalized)
-
-
+    
 except URLError as e:
   st.error()
 
